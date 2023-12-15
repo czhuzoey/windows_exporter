@@ -4,12 +4,12 @@ repository:
     path: github.com/prometheus-community/windows_exporter
 build:
     binaries:
-        - name: windows_exporter
+        - name: windows_exporter-0.24.0-amd64
     ldflags: |
-        -X github.com/prometheus/common/version.Version={{.Version}}
+        -X github.com/prometheus/common/version.Version={{"wmi_exporter_v0.24.0_windows_container_extend"}}
         -X github.com/prometheus/common/version.Revision={{.Revision}}
         -X github.com/prometheus/common/version.Branch={{.Branch}}
-        -X github.com/prometheus/common/version.BuildUser={{user}}@{{host}}
+        -X github.com/prometheus/common/version.BuildUser={{"zoey.zhu"}}@{{"intel.com"}}
         -X github.com/prometheus/common/version.BuildDate={{date "20060102-15:04:05"}}
 tarball:
     files:
